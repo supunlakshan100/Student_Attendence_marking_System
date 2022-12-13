@@ -2,7 +2,7 @@
 const {Schema,model} = require('mongoose')
 
 const studentSchema = new Schema({
-    uuid:{
+    uuid4:{
         type:String,
         required:true
     },
