@@ -2,10 +2,13 @@
 const express = require('express')
 const studentModel = require('./models/students')
 const mongoose = require('mongoose')
-var uuidBase62 = require('uuid-base62');
+const uuidBase62 = require('uuid-base62');
+const cors = require('cors')
 
 
 const app = express()
+
+app.use(cors())
 
 app.use(express.json())
 
