@@ -1,12 +1,19 @@
 
 from fastapi import FastAPI
+from enum import Enum
 import requests
-from random import randint
+
 app = FastAPI()
 
+class Action(Enum):
+    ENTER = "enter"
+    LEAVE = "leave"
 
-@app.get('/')
-async def root():
-    students = requests.get('https://data.mongodb-api.com/app/application-0-nfogs/endpoint/attendece').json()
-    return students[randint(0,len(students)-1)]
+@app.get('/{id}/{action}')
+async def root(id:str,action:Action):
+    url = f"https://smart-attendence.deta.dev/{id}/{action.value}"
+    requests.put(url)
+    return "success"
+    
+    
     
