@@ -5,7 +5,6 @@ const mongoose = require('mongoose')
 const uuidBase62 = require('uuid-base62');
 const cors = require('cors')
 
-
 const app = express()
 
 app.use(cors())
