@@ -8,7 +8,8 @@ const studentSchema = new Schema({
     },
     ssn:{
         type:String,
-        required:true
+        required:true,
+        unique:true
     },
     name:{
         type:String,
@@ -20,11 +21,13 @@ const studentSchema = new Schema({
     },
     email:{
         type:String,
-        required:true
+        required:true,
+        unique:true
     },
     phone_number:{
         type:String,
-        required:true
+        required:true,
+        unique:true
     },
     class_fee:{
         type:String,
