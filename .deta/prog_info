@@ -1,0 +1,1 @@
+{"id":"350575a1-fb0f-4873-9994-34ea8a835c66","space":14603,"runtime":"python3.9","name":"Rfid","path":"pq84yn","project":"c05ucszo","account":"144798365827","region":"ap-southeast-1","deps":["fastapi","requests"],"envs":null,"public":true,"log_level":"off","cron":""}
